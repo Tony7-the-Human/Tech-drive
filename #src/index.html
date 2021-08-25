@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
-				<section class="section-hero">
-					<div class="hero _container">
-						<div class="hero__body">
-							<div class="body__content">
-								<h1 class="hero__title">Запись на технический осмотр<span class="hero__title_descr">с бронированием времени и оплатой онлайн</span></h1>
-							<p class="hero_descr">более 5 000 центров по всей России</p>
-							</div>
-							<img src="img/hero-image.png" alt="Hero image auto" class="hero__img_bg ibg">
-						</div>
-						
-					</div>
-					
-				</section>
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+@@include('_head.html',{ "title":"Главная" })
+
+<body>
+    <div class="wrapper">
+        @@include('_header.html',{})
+        <main class="page">
+            <section class="section-hero">
+                <div class="hero _container">
+                    <div class="hero__body">
+                        <div class="body__content">
+                            <h1 class="hero__title">Запись на технический осмотр<span class="hero__title_descr">с бронированием времени и оплатой онлайн</span></h1>
+                            <p class="hero__descr">более 5 000 центров по всей России</p>
+                            <div class="form">
+                                <h2 class="form__h2">Выберите свой город</h2>
+                                <div class="form-item">
+                                    <select class="form__select">
+											<option value="Санкт-Петербург">Санкт-Петербург</option>
+											<option value="Москва">Москва</option>
+											<option value="Казань">Казань</option>
+										</select>
+                                </div>
+                                <button class="form__btn" type="submit">Записаться</button>
+                            </div>
+                        </div>
+                        <img src="img/hero-image.png" alt="Hero image auto" class="hero__img_bg ibg">
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_popup.html',{}) @@include('_js.html',{})
+</body>
+
 </html>
