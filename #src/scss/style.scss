@@ -97,6 +97,7 @@ body {
     line-height: 129.4%;
     /* or 54px */
     color: #333333;
+    margin-left: 22px;
 }
 
 .hero__title_descr {
@@ -114,7 +115,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     line-height: 150.4%;
-    /* identical to box height, or 27px */
+    margin-left: 22px;
     color: #515151;
 }
 
@@ -137,7 +138,6 @@ body {
     box-shadow: 0px 27px 63px rgba(0, 0, 0, 0.1);
     border-radius: 80px;
     padding: 16px 25px;
-    margin-left: -25px;
 }
 
 .form__h2 {
@@ -228,4 +228,69 @@ body {
     width: 182px;
     padding: 22px 40px;
     margin-top: 6px;
+}
+
+.section-services {
+    margin: 42px 0 101px 0;
+}
+
+.services {
+    border-bottom: 1px solid #D0D0D0;
+    padding-bottom: 42px;
+    // .services__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    // .services__item
+    &__item {
+        display: flex;
+        align-items: center;
+        flex: 0 1 318px;
+        &_number {
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 140%;
+            /* identical to box height, or 101px */
+            color: #EBEBEB;
+            margin-right: 23px;
+            &_02 {
+                font-weight: bold;
+                font-size: 72px;
+                line-height: 140%;
+                /* identical to box height, or 101px */
+                color: #EBEBEB;
+                margin-right: 39px;
+            }
+            &_03 {
+                font-weight: bold;
+                font-size: 72px;
+                line-height: 140%;
+                /* identical to box height, or 101px */
+                color: #EBEBEB;
+                margin-right: 39px;
+            }
+            &_04 {
+                font-weight: bold;
+                font-size: 72px;
+                line-height: 140%;
+                /* identical to box height, or 101px */
+                color: #EBEBEB;
+                margin-right: 31px;
+            }
+        }
+        &:last-child {
+            margin-right: 42px;
+        }
+    }
+    &__item p {
+        max-width: 180px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+        color: #000000;
+    }
 }
