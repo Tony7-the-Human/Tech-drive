@@ -1,5 +1,129 @@
-footer {
+.footer {
+    padding: 63px 0px 100px 18px;
+    background: #104D91;
+    border-radius: 0px;
 }
-//====================================================================================================
 
+.footer__container {
+    display: flex;
+    align-items: flex-start;
+}
+
+._container {}
+
+.heder__logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo-img {
+    width: 55px;
+    height: 47px;
+    margin-right: 24px;
+}
+
+.footer__descr {
+    max-width: 250px;
+    margin-right: 40px;
+    font-size: 13px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.footer__nav {}
+
+.nav-footer {
+    flex: 1 1 auto;
+}
+
+.nav-footer__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-footer__item {
+    margin-right: 40px;
+    border-bottom: #006FE6;
+}
+
+.footer__copyright {
+    padding-left: 370px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 130%;
+    /* or 14px */
+    color: #FFFFFF;
+}
+
+.footer__copyright_l {
+    padding-left: 370px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 178.5%;
+    /* or 20px */
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+.nav-footer__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FAF9EE;
+    transition: color .3s ease;
+}
+
+.nav-footer__link:hover {
+    color: #2C92FF;
+}
+
+.footer__contacts {
+    text-align: right;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+}
+
+.footer__contact_btn {
+    padding-bottom: 7px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: right;
+    color: #FFFFFF;
+    transition: all .3s ease;
+}
+
+.footer__contact_btn_l {
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+    text-align: right;
+    color: #B7D4FF;
+}
+
+.footer__contact_descr {
+    padding-bottom: 18px;
+    font-size: 14px;
+    line-height: 149.5%;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.footer__avatar {
+    border-radius: 50%;
+    padding: 16px 16px;
+    background: #FCFCFC;
+    cursor: pointer;
+}
+
+.footer__avatar img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+//====================================================================================================
 //====================================================================================================
