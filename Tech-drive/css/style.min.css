@@ -767,7 +767,19 @@ body.ie ._ibg img {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .header__wrapper {
+    position: fixed;
+    padding: 15px 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 50;
+  }
 }
 
 .header__container {
@@ -778,6 +790,11 @@ body.ie ._ibg img {
 .heder__logo {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991.98px) {
+  .heder__logo {
+    flex: 1 1 auto;
+  }
 }
 
 .header__logo-img {
@@ -794,6 +811,38 @@ body.ie ._ibg img {
   color: #6F6B6B;
 }
 
+@media (max-width: 991.98px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 80px;
+    left: -100%;
+    padding: 40px 15px 30px 15px;
+    transition: left 0.3s ease;
+    background-color: #F0F5FA;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: -100%;
+    z-index: 2;
+    transition: left 0.3s ease;
+    background-color: #F0F5FA;
+  }
+  .menu__body._active {
+    left: 0;
+    top: 80px;
+  }
+  .menu__body._active::before {
+    left: 0;
+    top: 80px;
+  }
+}
+
 .nav-header {
   flex: 1 1 auto;
 }
@@ -803,10 +852,21 @@ body.ie ._ibg img {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (max-width: 991.98px) {
+  .nav-header__list {
+    flex-direction: column;
+  }
+}
 
 .nav-header__item {
   margin-right: 40px;
   border-bottom: #006FE6;
+  z-index: 3;
+}
+@media (max-width: 991.98px) {
+  .nav-header__item {
+    margin-bottom: 40px;
+  }
 }
 
 .nav-header__link {
@@ -817,13 +877,19 @@ body.ie ._ibg img {
   color: #13141E;
   transition: all 0.3s ease;
 }
-
-.nav-header__link:hover {
-  padding-bottom: 40px;
-  border-bottom: 1px solid #006FE6;
-  color: #006FE6;
+@media (max-width: 991.98px) {
+  .nav-header__link {
+    font-size: 18px;
+  }
 }
 
+@media (min-width: 767.98px) {
+  .nav-header__link:hover {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #006FE6;
+    color: #006FE6;
+  }
+}
 .header__login {
   display: flex;
   align-items: center;
@@ -837,12 +903,22 @@ body.ie ._ibg img {
   color: #046EE3;
   transition: all 0.3s ease;
 }
+@media (max-width: 991.98px) {
+  .header__btn {
+    margin-right: 15px;
+  }
+}
 
 .header__avatar {
   border-radius: 50%;
   padding: 16px 16px;
   background: #FCFCFC;
   cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .header__avatar {
+    margin-right: 15px;
+  }
 }
 
 .header__avatar img {
@@ -851,51 +927,47 @@ body.ie ._ibg img {
   height: 22px;
 }
 
-/*
-//Burger
 .icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
+  display: none;
 }
-*/
+@media (max-width: 991.98px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span {
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .icon-menu._active span {
+    transform: scale(0);
+  }
+  .icon-menu._active span:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .icon-menu._active span:last-child {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+
 .footer {
   padding: 63px 0px 100px 18px;
   background: #104D91;
@@ -1016,7 +1088,7 @@ body.ie ._ibg img {
   height: 22px;
 }
 
-.page {
+.section {
   flex: 1 1 auto;
   margin-top: 100px;
 }
@@ -1469,4 +1541,99 @@ ol.item-info li.item-info__item:nth-child(4) {
 
 ol.item-info li.item-info__item:last-child {
   order: 2;
+}
+
+.section-download {
+  padding-top: 51px;
+  padding-bottom: 68px;
+}
+
+.download {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.download__title {
+  margin-top: 59px;
+  margin-right: 72px;
+  max-width: 318px;
+}
+.download__body {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #D0D0D0;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.download__columns {
+  display: flex;
+  flex: 0 1 375px;
+}
+.download__columns:nth-child(1) {
+  border-right: 1px solid #D0D0D0;
+  box-sizing: border-box;
+}
+.download__columns:nth-child(2) {
+  border-right: 1px solid #D0D0D0;
+  box-sizing: border-box;
+}
+.download__item {
+  display: flex;
+  flex-direction: column;
+  padding: 63px 16px 0px 80px;
+}
+.download__item:not(:last-child) > * {
+  margin-bottom: 0px;
+}
+.download__text {
+  flex: 1 1 auto;
+  position: relative;
+  font-size: 16px;
+  line-height: 140%;
+  max-width: 279px;
+  color: #13141E;
+  margin-bottom: 69px;
+}
+.download__text::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -48px;
+  width: 33px;
+  height: 33px;
+  background-image: url("../img/pdf-image.svg");
+  background-repeat: no-repeat;
+  background-size: 33px 33px;
+}
+.download__link {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #FBF9ED;
+  border-radius: 80px;
+  max-width: 122px;
+  min-height: 41px;
+  text-align: center;
+  padding: 0px 21px;
+  color: #000000;
+  margin-bottom: 35px;
+  margin-left: 149px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.download__link:hover {
+  background-color: #FFFCDD;
+}
+.download__link::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 27px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/download.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
 }
